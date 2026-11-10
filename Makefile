@@ -1,10 +1,13 @@
-.PHONY: test generate experiment
+.PHONY: test analyze experiment generate
 
 test:
-	python -m unittest discover -s tests -v
+	python -m pytest -q
 
-generate:
-	python -m heatbridge_pk.cli generate --output-dir data --scenarios 60 --neighbourhoods 35 --shelters 9 --seed 17
+analyze:
+	python -m heatbridge_pk.cli analyze --output-dir outputs
 
 experiment:
-	python -m heatbridge_pk.cli experiment --output-dir outputs --scenarios 60 --neighbourhoods 35 --shelters 9 --seed 17
+	python -m heatbridge_pk.cli experiment --output-dir outputs/default
+
+generate:
+	python -m heatbridge_pk.cli generate --output-dir data

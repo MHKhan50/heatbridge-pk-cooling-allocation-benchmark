@@ -1,4 +1,4 @@
-# Methodology and preregistered evaluation protocol
+# Methodology and evaluation protocol
 
 ## Scope
 
@@ -12,11 +12,15 @@ Each scenario contains neighbourhood demand and shelter supply in a 20 km × 20 
 
 Policies order neighbourhoods according to a fixed priority rule, then allocate each neighbourhood's demand across shelters in ascending score order. Effective shelter capacity is nominal capacity multiplied by power and water reliability. Demand can be split across shelters. Unserved demand remains uncovered.
 
+## Stress sweep (`analyze`)
+
+The sweep multiplies every shelter's usable capacity by 0.5, 1, 2, 4 and 8, and runs each with no reach limit and with a 5 km straight-line reach limit. All three policies are scored on the same 60 scenarios at each setting. Differences against `nearest` are computed per scenario and summarised with a percentile bootstrap over scenarios (2,000 resamples, seed 17).
+
 ## Primary outcomes
 
 Primary outcome: risk-weighted coverage. Secondary outcomes: population coverage, high-vulnerability coverage, low-vulnerability coverage, equity gap, mean travel distance, and mean service resilience.
 
-## Confirmatory protocol for research use
+## Protocol for any further study
 
 1. Freeze code and protocol before running confirmatory experiments.
 2. Use at least 30 independent seeds; retain scenario-level paired comparisons.

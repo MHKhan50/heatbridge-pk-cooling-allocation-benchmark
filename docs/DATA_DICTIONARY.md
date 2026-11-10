@@ -1,6 +1,6 @@
 # Data dictionary
 
-All records generated in v0.1.0 are synthetic. Coordinates are abstract kilometres; reliability and exposure values are unit-interval scenario parameters, not measured Pakistan statistics.
+All generated records are synthetic. Coordinates are abstract kilometres; reliability and exposure values are unit-interval scenario parameters, not measured Pakistan statistics.
 
 ## `neighbourhoods.csv`
 

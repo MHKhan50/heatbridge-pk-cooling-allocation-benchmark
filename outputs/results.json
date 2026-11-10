@@ -1,0 +1,1117 @@
+{
+  "synthetic_only": true,
+  "seed": 17,
+  "bootstrap_replicates": 2000,
+  "settings": [
+    {
+      "capacity_scale": 0.5,
+      "reach_limit": "none",
+      "mean_capacity_to_demand_ratio": 0.0989,
+      "scenarios": 60,
+      "policy_means": {
+        "nearest": {
+          "population_coverage": 0.0989,
+          "risk_weighted_coverage": 0.0957,
+          "high_vulnerability_coverage": 0.0987,
+          "low_vulnerability_coverage": 0.0985,
+          "equity_gap_high_minus_low": 0.0001,
+          "mean_travel_distance_km": 8.4967,
+          "mean_service_resilience": 0.5899
+        },
+        "vulnerability_first": {
+          "population_coverage": 0.0989,
+          "risk_weighted_coverage": 0.2018,
+          "high_vulnerability_coverage": 0.2591,
+          "low_vulnerability_coverage": 0.0,
+          "equity_gap_high_minus_low": 0.2591,
+          "mean_travel_distance_km": 8.3767,
+          "mean_service_resilience": 0.5899
+        },
+        "resilience_aware": {
+          "population_coverage": 0.0989,
+          "risk_weighted_coverage": 0.1988,
+          "high_vulnerability_coverage": 0.2564,
+          "low_vulnerability_coverage": 0.0,
+          "equity_gap_high_minus_low": 0.2564,
+          "mean_travel_distance_km": 8.3423,
+          "mean_service_resilience": 0.5899
+        }
+      },
+      "difference_vs_nearest": {
+        "vulnerability_first": {
+          "population_coverage": {
+            "mean": 0.0,
+            "ci95_low": 0.0,
+            "ci95_high": 0.0
+          },
+          "risk_weighted_coverage": {
+            "mean": 0.1061,
+            "ci95_low": 0.0946,
+            "ci95_high": 0.1172
+          },
+          "high_vulnerability_coverage": {
+            "mean": 0.1604,
+            "ci95_low": 0.1299,
+            "ci95_high": 0.1924
+          },
+          "low_vulnerability_coverage": {
+            "mean": -0.0985,
+            "ci95_low": -0.1243,
+            "ci95_high": -0.0746
+          },
+          "equity_gap_high_minus_low": {
+            "mean": 0.259,
+            "ci95_low": 0.2124,
+            "ci95_high": 0.3052
+          },
+          "mean_travel_distance_km": {
+            "mean": -0.1201,
+            "ci95_low": -0.8211,
+            "ci95_high": 0.5862
+          },
+          "mean_service_resilience": {
+            "mean": 0.0,
+            "ci95_low": 0.0,
+            "ci95_high": 0.0
+          }
+        },
+        "resilience_aware": {
+          "population_coverage": {
+            "mean": 0.0,
+            "ci95_low": 0.0,
+            "ci95_high": 0.0
+          },
+          "risk_weighted_coverage": {
+            "mean": 0.1031,
+            "ci95_low": 0.0914,
+            "ci95_high": 0.1142
+          },
+          "high_vulnerability_coverage": {
+            "mean": 0.1578,
+            "ci95_low": 0.1292,
+            "ci95_high": 0.1886
+          },
+          "low_vulnerability_coverage": {
+            "mean": -0.0985,
+            "ci95_low": -0.1243,
+            "ci95_high": -0.0746
+          },
+          "equity_gap_high_minus_low": {
+            "mean": 0.2563,
+            "ci95_low": 0.2107,
+            "ci95_high": 0.3002
+          },
+          "mean_travel_distance_km": {
+            "mean": -0.1544,
+            "ci95_low": -0.8832,
+            "ci95_high": 0.5783
+          },
+          "mean_service_resilience": {
+            "mean": 0.0,
+            "ci95_low": 0.0,
+            "ci95_high": 0.0
+          }
+        }
+      }
+    },
+    {
+      "capacity_scale": 0.5,
+      "reach_limit": "5km",
+      "mean_capacity_to_demand_ratio": 0.0989,
+      "scenarios": 60,
+      "policy_means": {
+        "nearest": {
+          "population_coverage": 0.0981,
+          "risk_weighted_coverage": 0.0917,
+          "high_vulnerability_coverage": 0.0884,
+          "low_vulnerability_coverage": 0.0985,
+          "equity_gap_high_minus_low": -0.01,
+          "mean_travel_distance_km": 3.2658,
+          "mean_service_resilience": 0.5898
+        },
+        "vulnerability_first": {
+          "population_coverage": 0.0979,
+          "risk_weighted_coverage": 0.1508,
+          "high_vulnerability_coverage": 0.1741,
+          "low_vulnerability_coverage": 0.0209,
+          "equity_gap_high_minus_low": 0.1532,
+          "mean_travel_distance_km": 3.1186,
+          "mean_service_resilience": 0.5898
+        },
+        "resilience_aware": {
+          "population_coverage": 0.0979,
+          "risk_weighted_coverage": 0.1497,
+          "high_vulnerability_coverage": 0.1745,
+          "low_vulnerability_coverage": 0.0203,
+          "equity_gap_high_minus_low": 0.1541,
+          "mean_travel_distance_km": 3.1017,
+          "mean_service_resilience": 0.5898
+        }
+      },
+      "difference_vs_nearest": {
+        "vulnerability_first": {
+          "population_coverage": {
+            "mean": -0.0002,
+            "ci95_low": -0.0006,
+            "ci95_high": 0.0
+          },
+          "risk_weighted_coverage": {
+            "mean": 0.0591,
+            "ci95_low": 0.052,
+            "ci95_high": 0.0669
+          },
+          "high_vulnerability_coverage": {
+            "mean": 0.0857,
+            "ci95_low": 0.0668,
+            "ci95_high": 0.1052
+          },
+          "low_vulnerability_coverage": {
+            "mean": -0.0775,
+            "ci95_low": -0.0956,
+            "ci95_high": -0.0597
+          },
+          "equity_gap_high_minus_low": {
+            "mean": 0.1632,
+            "ci95_low": 0.1335,
+            "ci95_high": 0.1946
+          },
+          "mean_travel_distance_km": {
+            "mean": -0.1471,
+            "ci95_low": -0.2964,
+            "ci95_high": 0.0092
+          },
+          "mean_service_resilience": {
+            "mean": -0.0,
+            "ci95_low": -0.0,
+            "ci95_high": 0.0
+          }
+        },
+        "resilience_aware": {
+          "population_coverage": {
+            "mean": -0.0002,
+            "ci95_low": -0.0006,
+            "ci95_high": 0.0
+          },
+          "risk_weighted_coverage": {
+            "mean": 0.058,
+            "ci95_low": 0.0509,
+            "ci95_high": 0.0659
+          },
+          "high_vulnerability_coverage": {
+            "mean": 0.0861,
+            "ci95_low": 0.0674,
+            "ci95_high": 0.1048
+          },
+          "low_vulnerability_coverage": {
+            "mean": -0.0781,
+            "ci95_low": -0.0963,
+            "ci95_high": -0.0599
+          },
+          "equity_gap_high_minus_low": {
+            "mean": 0.1642,
+            "ci95_low": 0.1355,
+            "ci95_high": 0.1955
+          },
+          "mean_travel_distance_km": {
+            "mean": -0.1641,
+            "ci95_low": -0.3037,
+            "ci95_high": -0.0147
+          },
+          "mean_service_resilience": {
+            "mean": -0.0,
+            "ci95_low": -0.0,
+            "ci95_high": 0.0
+          }
+        }
+      }
+    },
+    {
+      "capacity_scale": 1.0,
+      "reach_limit": "none",
+      "mean_capacity_to_demand_ratio": 0.1978,
+      "scenarios": 60,
+      "policy_means": {
+        "nearest": {
+          "population_coverage": 0.1978,
+          "risk_weighted_coverage": 0.1927,
+          "high_vulnerability_coverage": 0.2095,
+          "low_vulnerability_coverage": 0.1888,
+          "equity_gap_high_minus_low": 0.0208,
+          "mean_travel_distance_km": 7.6328,
+          "mean_service_resilience": 0.5899
+        },
+        "vulnerability_first": {
+          "population_coverage": 0.1978,
+          "risk_weighted_coverage": 0.3582,
+          "high_vulnerability_coverage": 0.451,
+          "low_vulnerability_coverage": 0.0015,
+          "equity_gap_high_minus_low": 0.4494,
+          "mean_travel_distance_km": 7.5081,
+          "mean_service_resilience": 0.5899
+        },
+        "resilience_aware": {
+          "population_coverage": 0.1978,
+          "risk_weighted_coverage": 0.3559,
+          "high_vulnerability_coverage": 0.4451,
+          "low_vulnerability_coverage": 0.0017,
+          "equity_gap_high_minus_low": 0.4434,
+          "mean_travel_distance_km": 7.523,
+          "mean_service_resilience": 0.5899
+        }
+      },
+      "difference_vs_nearest": {
+        "vulnerability_first": {
+          "population_coverage": {
+            "mean": 0.0,
+            "ci95_low": 0.0,
+            "ci95_high": 0.0
+          },
+          "risk_weighted_coverage": {
+            "mean": 0.1655,
+            "ci95_low": 0.1502,
+            "ci95_high": 0.1799
+          },
+          "high_vulnerability_coverage": {
+            "mean": 0.2414,
+            "ci95_low": 0.2014,
+            "ci95_high": 0.2842
+          },
+          "low_vulnerability_coverage": {
+            "mean": -0.1872,
+            "ci95_low": -0.226,
+            "ci95_high": -0.152
+          },
+          "equity_gap_high_minus_low": {
+            "mean": 0.4286,
+            "ci95_low": 0.3662,
+            "ci95_high": 0.4902
+          },
+          "mean_travel_distance_km": {
+            "mean": -0.1247,
+            "ci95_low": -0.6831,
+            "ci95_high": 0.4191
+          },
+          "mean_service_resilience": {
+            "mean": 0.0,
+            "ci95_low": 0.0,
+            "ci95_high": 0.0
+          }
+        },
+        "resilience_aware": {
+          "population_coverage": {
+            "mean": 0.0,
+            "ci95_low": 0.0,
+            "ci95_high": 0.0
+          },
+          "risk_weighted_coverage": {
+            "mean": 0.1632,
+            "ci95_low": 0.1479,
+            "ci95_high": 0.1777
+          },
+          "high_vulnerability_coverage": {
+            "mean": 0.2356,
+            "ci95_low": 0.1952,
+            "ci95_high": 0.2783
+          },
+          "low_vulnerability_coverage": {
+            "mean": -0.1871,
+            "ci95_low": -0.2259,
+            "ci95_high": -0.1519
+          },
+          "equity_gap_high_minus_low": {
+            "mean": 0.4226,
+            "ci95_low": 0.3593,
+            "ci95_high": 0.4821
+          },
+          "mean_travel_distance_km": {
+            "mean": -0.1099,
+            "ci95_low": -0.6843,
+            "ci95_high": 0.4729
+          },
+          "mean_service_resilience": {
+            "mean": 0.0,
+            "ci95_low": 0.0,
+            "ci95_high": 0.0
+          }
+        }
+      }
+    },
+    {
+      "capacity_scale": 1.0,
+      "reach_limit": "5km",
+      "mean_capacity_to_demand_ratio": 0.1978,
+      "scenarios": 60,
+      "policy_means": {
+        "nearest": {
+          "population_coverage": 0.1932,
+          "risk_weighted_coverage": 0.1832,
+          "high_vulnerability_coverage": 0.1798,
+          "low_vulnerability_coverage": 0.2017,
+          "equity_gap_high_minus_low": -0.0219,
+          "mean_travel_distance_km": 3.1759,
+          "mean_service_resilience": 0.5894
+        },
+        "vulnerability_first": {
+          "population_coverage": 0.1936,
+          "risk_weighted_coverage": 0.2728,
+          "high_vulnerability_coverage": 0.3075,
+          "low_vulnerability_coverage": 0.0688,
+          "equity_gap_high_minus_low": 0.2386,
+          "mean_travel_distance_km": 3.1012,
+          "mean_service_resilience": 0.5896
+        },
+        "resilience_aware": {
+          "population_coverage": 0.1933,
+          "risk_weighted_coverage": 0.2704,
+          "high_vulnerability_coverage": 0.3061,
+          "low_vulnerability_coverage": 0.0675,
+          "equity_gap_high_minus_low": 0.2386,
+          "mean_travel_distance_km": 3.0767,
+          "mean_service_resilience": 0.5896
+        }
+      },
+      "difference_vs_nearest": {
+        "vulnerability_first": {
+          "population_coverage": {
+            "mean": 0.0004,
+            "ci95_low": -0.0007,
+            "ci95_high": 0.0018
+          },
+          "risk_weighted_coverage": {
+            "mean": 0.0895,
+            "ci95_low": 0.0786,
+            "ci95_high": 0.1008
+          },
+          "high_vulnerability_coverage": {
+            "mean": 0.1277,
+            "ci95_low": 0.1018,
+            "ci95_high": 0.1542
+          },
+          "low_vulnerability_coverage": {
+            "mean": -0.1328,
+            "ci95_low": -0.1648,
+            "ci95_high": -0.1025
+          },
+          "equity_gap_high_minus_low": {
+            "mean": 0.2605,
+            "ci95_low": 0.2131,
+            "ci95_high": 0.3091
+          },
+          "mean_travel_distance_km": {
+            "mean": -0.0747,
+            "ci95_low": -0.2136,
+            "ci95_high": 0.0595
+          },
+          "mean_service_resilience": {
+            "mean": 0.0002,
+            "ci95_low": -0.0,
+            "ci95_high": 0.0006
+          }
+        },
+        "resilience_aware": {
+          "population_coverage": {
+            "mean": 0.0001,
+            "ci95_low": -0.0011,
+            "ci95_high": 0.0016
+          },
+          "risk_weighted_coverage": {
+            "mean": 0.0872,
+            "ci95_low": 0.0762,
+            "ci95_high": 0.0988
+          },
+          "high_vulnerability_coverage": {
+            "mean": 0.1263,
+            "ci95_low": 0.1008,
+            "ci95_high": 0.1534
+          },
+          "low_vulnerability_coverage": {
+            "mean": -0.1342,
+            "ci95_low": -0.1659,
+            "ci95_high": -0.1037
+          },
+          "equity_gap_high_minus_low": {
+            "mean": 0.2605,
+            "ci95_low": 0.2136,
+            "ci95_high": 0.3091
+          },
+          "mean_travel_distance_km": {
+            "mean": -0.0992,
+            "ci95_low": -0.2284,
+            "ci95_high": 0.0296
+          },
+          "mean_service_resilience": {
+            "mean": 0.0003,
+            "ci95_low": -0.0,
+            "ci95_high": 0.0007
+          }
+        }
+      }
+    },
+    {
+      "capacity_scale": 2.0,
+      "reach_limit": "none",
+      "mean_capacity_to_demand_ratio": 0.3956,
+      "scenarios": 60,
+      "policy_means": {
+        "nearest": {
+          "population_coverage": 0.3956,
+          "risk_weighted_coverage": 0.3932,
+          "high_vulnerability_coverage": 0.407,
+          "low_vulnerability_coverage": 0.4046,
+          "equity_gap_high_minus_low": 0.0024,
+          "mean_travel_distance_km": 6.6647,
+          "mean_service_resilience": 0.5899
+        },
+        "vulnerability_first": {
+          "population_coverage": 0.3956,
+          "risk_weighted_coverage": 0.5974,
+          "high_vulnerability_coverage": 0.6911,
+          "low_vulnerability_coverage": 0.0421,
+          "equity_gap_high_minus_low": 0.649,
+          "mean_travel_distance_km": 6.4966,
+          "mean_service_resilience": 0.5899
+        },
+        "resilience_aware": {
+          "population_coverage": 0.3956,
+          "risk_weighted_coverage": 0.595,
+          "high_vulnerability_coverage": 0.6873,
+          "low_vulnerability_coverage": 0.0436,
+          "equity_gap_high_minus_low": 0.6437,
+          "mean_travel_distance_km": 6.4835,
+          "mean_service_resilience": 0.5899
+        }
+      },
+      "difference_vs_nearest": {
+        "vulnerability_first": {
+          "population_coverage": {
+            "mean": 0.0,
+            "ci95_low": 0.0,
+            "ci95_high": 0.0
+          },
+          "risk_weighted_coverage": {
+            "mean": 0.2042,
+            "ci95_low": 0.1915,
+            "ci95_high": 0.2166
+          },
+          "high_vulnerability_coverage": {
+            "mean": 0.2841,
+            "ci95_low": 0.2432,
+            "ci95_high": 0.3267
+          },
+          "low_vulnerability_coverage": {
+            "mean": -0.3625,
+            "ci95_low": -0.4135,
+            "ci95_high": -0.3128
+          },
+          "equity_gap_high_minus_low": {
+            "mean": 0.6467,
+            "ci95_low": 0.5726,
+            "ci95_high": 0.7185
+          },
+          "mean_travel_distance_km": {
+            "mean": -0.1681,
+            "ci95_low": -0.5779,
+            "ci95_high": 0.2305
+          },
+          "mean_service_resilience": {
+            "mean": 0.0,
+            "ci95_low": 0.0,
+            "ci95_high": 0.0
+          }
+        },
+        "resilience_aware": {
+          "population_coverage": {
+            "mean": 0.0,
+            "ci95_low": 0.0,
+            "ci95_high": 0.0
+          },
+          "risk_weighted_coverage": {
+            "mean": 0.2018,
+            "ci95_low": 0.189,
+            "ci95_high": 0.2142
+          },
+          "high_vulnerability_coverage": {
+            "mean": 0.2803,
+            "ci95_low": 0.2412,
+            "ci95_high": 0.3217
+          },
+          "low_vulnerability_coverage": {
+            "mean": -0.361,
+            "ci95_low": -0.4119,
+            "ci95_high": -0.3119
+          },
+          "equity_gap_high_minus_low": {
+            "mean": 0.6413,
+            "ci95_low": 0.5671,
+            "ci95_high": 0.7117
+          },
+          "mean_travel_distance_km": {
+            "mean": -0.1812,
+            "ci95_low": -0.5772,
+            "ci95_high": 0.2382
+          },
+          "mean_service_resilience": {
+            "mean": 0.0,
+            "ci95_low": 0.0,
+            "ci95_high": 0.0
+          }
+        }
+      }
+    },
+    {
+      "capacity_scale": 2.0,
+      "reach_limit": "5km",
+      "mean_capacity_to_demand_ratio": 0.3956,
+      "scenarios": 60,
+      "policy_means": {
+        "nearest": {
+          "population_coverage": 0.3558,
+          "risk_weighted_coverage": 0.353,
+          "high_vulnerability_coverage": 0.357,
+          "low_vulnerability_coverage": 0.3521,
+          "equity_gap_high_minus_low": 0.0049,
+          "mean_travel_distance_km": 3.0782,
+          "mean_service_resilience": 0.5867
+        },
+        "vulnerability_first": {
+          "population_coverage": 0.3574,
+          "risk_weighted_coverage": 0.4454,
+          "high_vulnerability_coverage": 0.4828,
+          "low_vulnerability_coverage": 0.1929,
+          "equity_gap_high_minus_low": 0.2899,
+          "mean_travel_distance_km": 3.0374,
+          "mean_service_resilience": 0.5862
+        },
+        "resilience_aware": {
+          "population_coverage": 0.3552,
+          "risk_weighted_coverage": 0.4418,
+          "high_vulnerability_coverage": 0.4826,
+          "low_vulnerability_coverage": 0.1962,
+          "equity_gap_high_minus_low": 0.2864,
+          "mean_travel_distance_km": 3.026,
+          "mean_service_resilience": 0.5877
+        }
+      },
+      "difference_vs_nearest": {
+        "vulnerability_first": {
+          "population_coverage": {
+            "mean": 0.0015,
+            "ci95_low": -0.0022,
+            "ci95_high": 0.0052
+          },
+          "risk_weighted_coverage": {
+            "mean": 0.0924,
+            "ci95_low": 0.0818,
+            "ci95_high": 0.1027
+          },
+          "high_vulnerability_coverage": {
+            "mean": 0.1258,
+            "ci95_low": 0.0984,
+            "ci95_high": 0.1516
+          },
+          "low_vulnerability_coverage": {
+            "mean": -0.1592,
+            "ci95_low": -0.1927,
+            "ci95_high": -0.1286
+          },
+          "equity_gap_high_minus_low": {
+            "mean": 0.285,
+            "ci95_low": 0.2367,
+            "ci95_high": 0.3346
+          },
+          "mean_travel_distance_km": {
+            "mean": -0.0408,
+            "ci95_low": -0.1345,
+            "ci95_high": 0.0444
+          },
+          "mean_service_resilience": {
+            "mean": -0.0005,
+            "ci95_low": -0.0014,
+            "ci95_high": 0.0003
+          }
+        },
+        "resilience_aware": {
+          "population_coverage": {
+            "mean": -0.0007,
+            "ci95_low": -0.0042,
+            "ci95_high": 0.0026
+          },
+          "risk_weighted_coverage": {
+            "mean": 0.0887,
+            "ci95_low": 0.0779,
+            "ci95_high": 0.0996
+          },
+          "high_vulnerability_coverage": {
+            "mean": 0.1256,
+            "ci95_low": 0.0982,
+            "ci95_high": 0.1511
+          },
+          "low_vulnerability_coverage": {
+            "mean": -0.1559,
+            "ci95_low": -0.1864,
+            "ci95_high": -0.129
+          },
+          "equity_gap_high_minus_low": {
+            "mean": 0.2814,
+            "ci95_low": 0.2352,
+            "ci95_high": 0.3289
+          },
+          "mean_travel_distance_km": {
+            "mean": -0.0522,
+            "ci95_low": -0.1458,
+            "ci95_high": 0.0312
+          },
+          "mean_service_resilience": {
+            "mean": 0.001,
+            "ci95_low": -0.0002,
+            "ci95_high": 0.0021
+          }
+        }
+      }
+    },
+    {
+      "capacity_scale": 4.0,
+      "reach_limit": "none",
+      "mean_capacity_to_demand_ratio": 0.7912,
+      "scenarios": 60,
+      "policy_means": {
+        "nearest": {
+          "population_coverage": 0.7466,
+          "risk_weighted_coverage": 0.7465,
+          "high_vulnerability_coverage": 0.7453,
+          "low_vulnerability_coverage": 0.7492,
+          "equity_gap_high_minus_low": -0.0039,
+          "mean_travel_distance_km": 6.0357,
+          "mean_service_resilience": 0.5888
+        },
+        "vulnerability_first": {
+          "population_coverage": 0.7466,
+          "risk_weighted_coverage": 0.8694,
+          "high_vulnerability_coverage": 0.9218,
+          "low_vulnerability_coverage": 0.4489,
+          "equity_gap_high_minus_low": 0.4728,
+          "mean_travel_distance_km": 5.98,
+          "mean_service_resilience": 0.5887
+        },
+        "resilience_aware": {
+          "population_coverage": 0.7466,
+          "risk_weighted_coverage": 0.8684,
+          "high_vulnerability_coverage": 0.9215,
+          "low_vulnerability_coverage": 0.4553,
+          "equity_gap_high_minus_low": 0.4662,
+          "mean_travel_distance_km": 5.9591,
+          "mean_service_resilience": 0.5895
+        }
+      },
+      "difference_vs_nearest": {
+        "vulnerability_first": {
+          "population_coverage": {
+            "mean": 0.0,
+            "ci95_low": 0.0,
+            "ci95_high": 0.0
+          },
+          "risk_weighted_coverage": {
+            "mean": 0.1229,
+            "ci95_low": 0.0983,
+            "ci95_high": 0.1479
+          },
+          "high_vulnerability_coverage": {
+            "mean": 0.1765,
+            "ci95_low": 0.1331,
+            "ci95_high": 0.2207
+          },
+          "low_vulnerability_coverage": {
+            "mean": -0.3003,
+            "ci95_low": -0.3594,
+            "ci95_high": -0.2423
+          },
+          "equity_gap_high_minus_low": {
+            "mean": 0.4768,
+            "ci95_low": 0.3863,
+            "ci95_high": 0.5682
+          },
+          "mean_travel_distance_km": {
+            "mean": -0.0556,
+            "ci95_low": -0.2784,
+            "ci95_high": 0.1607
+          },
+          "mean_service_resilience": {
+            "mean": -0.0,
+            "ci95_low": -0.0004,
+            "ci95_high": 0.0004
+          }
+        },
+        "resilience_aware": {
+          "population_coverage": {
+            "mean": 0.0,
+            "ci95_low": 0.0,
+            "ci95_high": 0.0
+          },
+          "risk_weighted_coverage": {
+            "mean": 0.1219,
+            "ci95_low": 0.0975,
+            "ci95_high": 0.1468
+          },
+          "high_vulnerability_coverage": {
+            "mean": 0.1762,
+            "ci95_low": 0.1336,
+            "ci95_high": 0.2201
+          },
+          "low_vulnerability_coverage": {
+            "mean": -0.294,
+            "ci95_low": -0.3547,
+            "ci95_high": -0.2358
+          },
+          "equity_gap_high_minus_low": {
+            "mean": 0.4702,
+            "ci95_low": 0.3783,
+            "ci95_high": 0.5624
+          },
+          "mean_travel_distance_km": {
+            "mean": -0.0765,
+            "ci95_low": -0.2955,
+            "ci95_high": 0.1266
+          },
+          "mean_service_resilience": {
+            "mean": 0.0007,
+            "ci95_low": -0.0,
+            "ci95_high": 0.0017
+          }
+        }
+      }
+    },
+    {
+      "capacity_scale": 4.0,
+      "reach_limit": "5km",
+      "mean_capacity_to_demand_ratio": 0.7912,
+      "scenarios": 60,
+      "policy_means": {
+        "nearest": {
+          "population_coverage": 0.5499,
+          "risk_weighted_coverage": 0.5415,
+          "high_vulnerability_coverage": 0.5306,
+          "low_vulnerability_coverage": 0.5563,
+          "equity_gap_high_minus_low": -0.0257,
+          "mean_travel_distance_km": 2.9672,
+          "mean_service_resilience": 0.5811
+        },
+        "vulnerability_first": {
+          "population_coverage": 0.5486,
+          "risk_weighted_coverage": 0.6087,
+          "high_vulnerability_coverage": 0.6348,
+          "low_vulnerability_coverage": 0.4176,
+          "equity_gap_high_minus_low": 0.2172,
+          "mean_travel_distance_km": 2.9243,
+          "mean_service_resilience": 0.5816
+        },
+        "resilience_aware": {
+          "population_coverage": 0.5511,
+          "risk_weighted_coverage": 0.6107,
+          "high_vulnerability_coverage": 0.6307,
+          "low_vulnerability_coverage": 0.4244,
+          "equity_gap_high_minus_low": 0.2064,
+          "mean_travel_distance_km": 2.928,
+          "mean_service_resilience": 0.5853
+        }
+      },
+      "difference_vs_nearest": {
+        "vulnerability_first": {
+          "population_coverage": {
+            "mean": -0.0013,
+            "ci95_low": -0.0063,
+            "ci95_high": 0.0036
+          },
+          "risk_weighted_coverage": {
+            "mean": 0.0673,
+            "ci95_low": 0.0553,
+            "ci95_high": 0.0795
+          },
+          "high_vulnerability_coverage": {
+            "mean": 0.1042,
+            "ci95_low": 0.0802,
+            "ci95_high": 0.1282
+          },
+          "low_vulnerability_coverage": {
+            "mean": -0.1387,
+            "ci95_low": -0.1688,
+            "ci95_high": -0.1109
+          },
+          "equity_gap_high_minus_low": {
+            "mean": 0.2429,
+            "ci95_low": 0.2006,
+            "ci95_high": 0.2854
+          },
+          "mean_travel_distance_km": {
+            "mean": -0.0429,
+            "ci95_low": -0.1031,
+            "ci95_high": 0.011
+          },
+          "mean_service_resilience": {
+            "mean": 0.0004,
+            "ci95_low": -0.0005,
+            "ci95_high": 0.0014
+          }
+        },
+        "resilience_aware": {
+          "population_coverage": {
+            "mean": 0.0013,
+            "ci95_low": -0.0041,
+            "ci95_high": 0.0063
+          },
+          "risk_weighted_coverage": {
+            "mean": 0.0692,
+            "ci95_low": 0.0578,
+            "ci95_high": 0.081
+          },
+          "high_vulnerability_coverage": {
+            "mean": 0.1002,
+            "ci95_low": 0.0769,
+            "ci95_high": 0.1241
+          },
+          "low_vulnerability_coverage": {
+            "mean": -0.1319,
+            "ci95_low": -0.1601,
+            "ci95_high": -0.1045
+          },
+          "equity_gap_high_minus_low": {
+            "mean": 0.2321,
+            "ci95_low": 0.1912,
+            "ci95_high": 0.2708
+          },
+          "mean_travel_distance_km": {
+            "mean": -0.0392,
+            "ci95_low": -0.103,
+            "ci95_high": 0.019
+          },
+          "mean_service_resilience": {
+            "mean": 0.0041,
+            "ci95_low": 0.0027,
+            "ci95_high": 0.0056
+          }
+        }
+      }
+    },
+    {
+      "capacity_scale": 8.0,
+      "reach_limit": "none",
+      "mean_capacity_to_demand_ratio": 1.5824,
+      "scenarios": 60,
+      "policy_means": {
+        "nearest": {
+          "population_coverage": 0.9723,
+          "risk_weighted_coverage": 0.9739,
+          "high_vulnerability_coverage": 0.9734,
+          "low_vulnerability_coverage": 0.9679,
+          "equity_gap_high_minus_low": 0.0055,
+          "mean_travel_distance_km": 4.7232,
+          "mean_service_resilience": 0.581
+        },
+        "vulnerability_first": {
+          "population_coverage": 0.9723,
+          "risk_weighted_coverage": 0.9873,
+          "high_vulnerability_coverage": 0.9962,
+          "low_vulnerability_coverage": 0.9344,
+          "equity_gap_high_minus_low": 0.0618,
+          "mean_travel_distance_km": 4.7311,
+          "mean_service_resilience": 0.5807
+        },
+        "resilience_aware": {
+          "population_coverage": 0.9723,
+          "risk_weighted_coverage": 0.9873,
+          "high_vulnerability_coverage": 0.9962,
+          "low_vulnerability_coverage": 0.9346,
+          "equity_gap_high_minus_low": 0.0615,
+          "mean_travel_distance_km": 4.7122,
+          "mean_service_resilience": 0.5879
+        }
+      },
+      "difference_vs_nearest": {
+        "vulnerability_first": {
+          "population_coverage": {
+            "mean": 0.0,
+            "ci95_low": 0.0,
+            "ci95_high": 0.0
+          },
+          "risk_weighted_coverage": {
+            "mean": 0.0134,
+            "ci95_low": 0.0033,
+            "ci95_high": 0.0284
+          },
+          "high_vulnerability_coverage": {
+            "mean": 0.0228,
+            "ci95_low": 0.0043,
+            "ci95_high": 0.0471
+          },
+          "low_vulnerability_coverage": {
+            "mean": -0.0335,
+            "ci95_low": -0.0612,
+            "ci95_high": -0.0104
+          },
+          "equity_gap_high_minus_low": {
+            "mean": 0.0563,
+            "ci95_low": 0.0185,
+            "ci95_high": 0.1067
+          },
+          "mean_travel_distance_km": {
+            "mean": 0.0079,
+            "ci95_low": -0.0826,
+            "ci95_high": 0.0896
+          },
+          "mean_service_resilience": {
+            "mean": -0.0003,
+            "ci95_low": -0.0013,
+            "ci95_high": 0.0006
+          }
+        },
+        "resilience_aware": {
+          "population_coverage": {
+            "mean": 0.0,
+            "ci95_low": 0.0,
+            "ci95_high": 0.0
+          },
+          "risk_weighted_coverage": {
+            "mean": 0.0134,
+            "ci95_low": 0.0033,
+            "ci95_high": 0.0283
+          },
+          "high_vulnerability_coverage": {
+            "mean": 0.0228,
+            "ci95_low": 0.0043,
+            "ci95_high": 0.0471
+          },
+          "low_vulnerability_coverage": {
+            "mean": -0.0332,
+            "ci95_low": -0.0609,
+            "ci95_high": -0.0103
+          },
+          "equity_gap_high_minus_low": {
+            "mean": 0.056,
+            "ci95_low": 0.0183,
+            "ci95_high": 0.1059
+          },
+          "mean_travel_distance_km": {
+            "mean": -0.011,
+            "ci95_low": -0.1137,
+            "ci95_high": 0.0749
+          },
+          "mean_service_resilience": {
+            "mean": 0.0069,
+            "ci95_low": 0.0049,
+            "ci95_high": 0.0091
+          }
+        }
+      }
+    },
+    {
+      "capacity_scale": 8.0,
+      "reach_limit": "5km",
+      "mean_capacity_to_demand_ratio": 1.5824,
+      "scenarios": 60,
+      "policy_means": {
+        "nearest": {
+          "population_coverage": 0.689,
+          "risk_weighted_coverage": 0.6867,
+          "high_vulnerability_coverage": 0.6885,
+          "low_vulnerability_coverage": 0.675,
+          "equity_gap_high_minus_low": 0.0136,
+          "mean_travel_distance_km": 2.8629,
+          "mean_service_resilience": 0.5761
+        },
+        "vulnerability_first": {
+          "population_coverage": 0.6872,
+          "risk_weighted_coverage": 0.7111,
+          "high_vulnerability_coverage": 0.7293,
+          "low_vulnerability_coverage": 0.6087,
+          "equity_gap_high_minus_low": 0.1206,
+          "mean_travel_distance_km": 2.8644,
+          "mean_service_resilience": 0.576
+        },
+        "resilience_aware": {
+          "population_coverage": 0.6898,
+          "risk_weighted_coverage": 0.7124,
+          "high_vulnerability_coverage": 0.7283,
+          "low_vulnerability_coverage": 0.6192,
+          "equity_gap_high_minus_low": 0.1091,
+          "mean_travel_distance_km": 2.8541,
+          "mean_service_resilience": 0.5832
+        }
+      },
+      "difference_vs_nearest": {
+        "vulnerability_first": {
+          "population_coverage": {
+            "mean": -0.0017,
+            "ci95_low": -0.0071,
+            "ci95_high": 0.0035
+          },
+          "risk_weighted_coverage": {
+            "mean": 0.0245,
+            "ci95_low": 0.0149,
+            "ci95_high": 0.0353
+          },
+          "high_vulnerability_coverage": {
+            "mean": 0.0408,
+            "ci95_low": 0.0207,
+            "ci95_high": 0.0642
+          },
+          "low_vulnerability_coverage": {
+            "mean": -0.0663,
+            "ci95_low": -0.0963,
+            "ci95_high": -0.0413
+          },
+          "equity_gap_high_minus_low": {
+            "mean": 0.1071,
+            "ci95_low": 0.0641,
+            "ci95_high": 0.157
+          },
+          "mean_travel_distance_km": {
+            "mean": 0.0015,
+            "ci95_low": -0.0275,
+            "ci95_high": 0.0299
+          },
+          "mean_service_resilience": {
+            "mean": -0.0002,
+            "ci95_low": -0.0012,
+            "ci95_high": 0.0009
+          }
+        },
+        "resilience_aware": {
+          "population_coverage": {
+            "mean": 0.0008,
+            "ci95_low": -0.0044,
+            "ci95_high": 0.0056
+          },
+          "risk_weighted_coverage": {
+            "mean": 0.0257,
+            "ci95_low": 0.0161,
+            "ci95_high": 0.0368
+          },
+          "high_vulnerability_coverage": {
+            "mean": 0.0397,
+            "ci95_low": 0.0217,
+            "ci95_high": 0.061
+          },
+          "low_vulnerability_coverage": {
+            "mean": -0.0558,
+            "ci95_low": -0.0853,
+            "ci95_high": -0.0319
+          },
+          "equity_gap_high_minus_low": {
+            "mean": 0.0956,
+            "ci95_low": 0.0567,
+            "ci95_high": 0.1421
+          },
+          "mean_travel_distance_km": {
+            "mean": -0.0088,
+            "ci95_low": -0.0388,
+            "ci95_high": 0.0241
+          },
+          "mean_service_resilience": {
+            "mean": 0.007,
+            "ci95_low": 0.0047,
+            "ci95_high": 0.0095
+          }
+        }
+      }
+    }
+  ]
+}

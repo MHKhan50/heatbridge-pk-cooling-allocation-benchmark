@@ -2,6 +2,12 @@ __pycache__/
 *.py[cod]
 .venv/
 venv/
+.pytest_cache/
 data/
-outputs/
+outputs/*
+!outputs/results.json
+!outputs/results.md
+!outputs/figures/
+outputs/figures/*
+!outputs/figures/coverage_by_capacity.png
 .DS_Store

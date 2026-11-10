@@ -10,7 +10,7 @@ import math
 import random
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Dict, Iterable, List, Tuple
+from typing import Dict, Iterable, List, Optional, Tuple
 
 
 @dataclass(frozen=True)
@@ -65,16 +65,33 @@ def generate_scenarios(n_scenarios: int = 60, n_neighbourhoods: int = 35,
     return neighbourhoods, shelters
 
 
-def _distance(a, b) -> float:
+def _distance(a: "Neighbourhood | Shelter", b: "Neighbourhood | Shelter") -> float:
     return math.hypot(a.x_km - b.x_km, a.y_km - b.y_km)
 
 
-def allocate(neighbourhoods: List[Neighbourhood], shelters: List[Shelter], policy: str) -> List[dict]:
-    """Allocate population demand in divisible blocks against usable shelter capacity."""
-    if policy not in {"nearest", "vulnerability_first", "resilience_aware"}:
+POLICIES = ("nearest", "vulnerability_first", "resilience_aware")
+
+
+def effective_capacity(shelter: Shelter, capacity_scale: float = 1.0) -> float:
+    """Usable places: nominal capacity reduced by power and water reliability."""
+    return float(shelter.capacity) * shelter.power_reliability * shelter.water_reliability * capacity_scale
+
+
+def allocate(neighbourhoods: List[Neighbourhood], shelters: List[Shelter], policy: str,
+             capacity_scale: float = 1.0, max_distance_km: Optional[float] = None) -> List[dict]:
+    """Allocate population demand in divisible blocks against usable shelter capacity.
+
+    ``capacity_scale`` multiplies every shelter's usable capacity (stress test).
+    ``max_distance_km`` removes shelters farther than this from a neighbourhood
+    (a reach limit); ``None`` means any shelter in the scenario can be used.
+    """
+    if policy not in POLICIES:
         raise ValueError(f"unknown policy: {policy}")
-    remaining = {s.shelter_id: float(s.capacity) * s.power_reliability * s.water_reliability
-                 for s in shelters}
+    if capacity_scale <= 0:
+        raise ValueError("capacity_scale must be positive")
+    if max_distance_km is not None and max_distance_km <= 0:
+        raise ValueError("max_distance_km must be positive or None")
+    remaining = {s.shelter_id: effective_capacity(s, capacity_scale) for s in shelters}
     by_id = {s.shelter_id: s for s in shelters}
     if policy == "nearest":
         ordered = sorted(neighbourhoods, key=lambda n: n.neighbourhood_id)
@@ -93,6 +110,8 @@ def allocate(neighbourhoods: List[Neighbourhood], shelters: List[Shelter], polic
             if cap <= 0:
                 continue
             dist = _distance(n, s)
+            if max_distance_km is not None and dist > max_distance_km:
+                continue
             if policy == "nearest":
                 score = dist + (1-s.accessibility)*2.0
             elif policy == "vulnerability_first":
@@ -124,8 +143,12 @@ def allocate(neighbourhoods: List[Neighbourhood], shelters: List[Shelter], polic
     return assignments
 
 
-def evaluate(neighbourhoods: List[Neighbourhood], shelters: List[Shelter], policy: str) -> Dict[str, float]:
-    rows = allocate(neighbourhoods, shelters, policy)
+def evaluate(neighbourhoods: List[Neighbourhood], shelters: List[Shelter], policy: str,
+             capacity_scale: float = 1.0, max_distance_km: Optional[float] = None,
+             rows: Optional[List[dict]] = None) -> Dict[str, float]:
+    """Score one policy on one scenario. Pass ``rows`` to reuse an allocation."""
+    if rows is None:
+        rows = allocate(neighbourhoods, shelters, policy, capacity_scale, max_distance_km)
     served_by_n: Dict[str, float] = {}
     weighted_served = 0.0
     weighted_total = 0.0
@@ -146,7 +169,7 @@ def evaluate(neighbourhoods: List[Neighbourhood], shelters: List[Shelter], polic
         resilience_total += served * (0.5*row["power_reliability"] + 0.3*row["water_reliability"] + 0.2*row["women_safe_access"])
     high = [n for n in neighbourhoods if n.social_vulnerability >= 0.70]
     low = [n for n in neighbourhoods if n.social_vulnerability < 0.40]
-    def coverage(group):
+    def coverage(group: List[Neighbourhood]) -> float:
         demand = sum(n.population_demand for n in group)
         served = sum(min(n.population_demand, served_by_n.get(n.neighbourhood_id, 0.0)) for n in group)
         return served / demand if demand else 0.0
@@ -159,6 +182,8 @@ def evaluate(neighbourhoods: List[Neighbourhood], shelters: List[Shelter], polic
         "equity_gap_high_minus_low": high_cov-low_cov,
         "mean_travel_distance_km": distance_total/raw_served if raw_served else 0.0,
         "mean_service_resilience": resilience_total/raw_served if raw_served else 0.0,
+        "capacity_to_demand_ratio": (sum(effective_capacity(s, capacity_scale) for s in shelters) / raw_total
+                                     if raw_total else 0.0),
     }
 
 
@@ -174,5 +199,6 @@ def write_csv(path: Path, rows: Iterable[dict]) -> None:
         writer.writerows(rows)
 
 
-def scenario_rows(neighbourhoods, shelters):
+def scenario_rows(neighbourhoods: List[Neighbourhood],
+                  shelters: List[Shelter]) -> Tuple[List[dict], List[dict]]:
     return ([n.__dict__ for n in neighbourhoods], [s.__dict__ for s in shelters])
