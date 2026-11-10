@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite this repository release."
+title: "HeatBridge-PK: A Synthetic Benchmark for Equitable, Outage-Resilient Cooling-Centre Allocation"
+version: 0.1.0
+date-released: 2026-11-10
+type: software
+authors:
+  - family-names: "Khan"
+    given-names: "Muzammal Hussain"
+repository-code: "https://github.com/MHKhan50/heatbridge-pk-cooling-allocation-benchmark"
+license: MIT
