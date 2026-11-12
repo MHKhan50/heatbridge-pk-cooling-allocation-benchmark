@@ -143,7 +143,7 @@ def plot(summary: Dict[str, object], path: Path) -> bool:
     except ImportError:
         print("matplotlib not installed; skipping the figure (pip install -r requirements.txt)")
         return False
-    colours = {"nearest": "#8a94a8", "vulnerability_first": "#2b5ce6", "resilience_aware": "#0f1932"}
+    colours = {"nearest": "#8a94a8", "vulnerability_first": "#1F4E9C", "resilience_aware": "#E3A800"}
     styles = {"none": "-", "5km": "--"}
     fig, axes = plt.subplots(1, 2, figsize=(11, 4.2))
     for ax, metric, title in zip(axes, ("risk_weighted_coverage", "low_vulnerability_coverage"),
