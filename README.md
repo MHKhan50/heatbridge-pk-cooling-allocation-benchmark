@@ -1,5 +1,7 @@
 # HeatBridge-PK
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24228980.svg)](https://doi.org/10.5281/zenodo.24228980)
+
 **A synthetic benchmark for allocating cooling-centre places during heatwaves with power and water outages, framed on Pakistani cities.**
 
 When a heatwave comes with load-shedding and water shortages, a city's cooling centres can host fewer people than their nominal capacity. HeatBridge-PK asks how three simple allocation rules share those reduced places between neighbourhoods with different heat exposure, social vulnerability and access barriers, and what each rule costs.
@@ -86,4 +88,4 @@ A short write-up of these results is on the Masmatix Insights page: [masmatixinn
 
 ## Citation and licence
 
-Citation metadata is in [`CITATION.cff`](CITATION.cff). No DOI is assigned yet. Code under the MIT licence ([`LICENSE`](LICENSE)).
+Citation metadata is in [`CITATION.cff`](CITATION.cff). DOI: [10.5281/zenodo.24228980](https://doi.org/10.5281/zenodo.24228980). Code under the MIT licence ([`LICENSE`](LICENSE)).
